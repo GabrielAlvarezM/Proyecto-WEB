@@ -7,7 +7,7 @@ const DashboardPage = () => {
     <div className="dashboard-container">
       <Link to="/dietas" className="dashboard-section diet-section">
         <div className="section-overlay">
-          <h2>Plan de Alimentación</h2>
+          <h2>Planes de Alimentación</h2>
         </div>
       </Link>
 
@@ -19,7 +19,7 @@ const DashboardPage = () => {
 
       <Link to="/suplementos" className="dashboard-section supplements-section">
         <div className="section-overlay">
-          <h2>Suplementación y Dónde Conseguirla</h2>
+          <h2>Suplementación</h2>
         </div>
       </Link>
     </div>

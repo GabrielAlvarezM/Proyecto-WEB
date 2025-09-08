@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './components/LoginPage'; 
 import DashboardPage from './components/DashboardPage';
 
@@ -9,7 +9,7 @@ function App() {
       {/* placeholder. */}
       {/* placeholder */}
       
-      {/* <Route path="/" element={<Navigate to="/login" />} /> */}
+      <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
       {/* placeholder*/}
