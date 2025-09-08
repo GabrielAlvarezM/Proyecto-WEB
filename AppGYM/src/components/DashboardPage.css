@@ -1,0 +1,54 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard-section {
+  flex: 1; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* zoom */
+.dashboard-section:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+
+.diet-section {
+  background-image: url('https://img.freepik.com/foto-gratis/variedad-platos-deliciosa-comida-brasilena_23-2148739179.jpg'); 
+}
+
+.exercise-section {
+  background-image: url('https://www.sportlife.es/uploads/s1/11/06/11/77/istock-587204700.jpeg');
+}
+
+.supplements-section {
+  background-image: url('https://strapi.fitia.app/uploads/suplementos_deportivos_1_9f22bd9520.png');
+}
+
+.section-overlay {
+  background-color: rgba(0, 0, 0, 0.5); 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-section:hover .section-overlay {
+  opacity: 1;
+}
+
+.section-overlay h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+}
