@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './DashboardPage.css';
 
-const DashboardPage = () => {
+const DashboardPage: React.FC = () => {
   return (
     <div className="dashboard-container">
       <Link to="/dietas" className="dashboard-section diet-section">

@@ -2,13 +2,13 @@
 import React from 'react';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
+import type { FC } from 'react';
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
 
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    //placeholder
     navigate('/dashboard');
   };
 
