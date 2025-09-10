@@ -2,7 +2,6 @@
 import React from 'react';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
-import type { FC } from 'react';
 
 const LoginPage: React.FC = () => {
 
@@ -10,6 +9,10 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = () => {
     navigate('/dashboard');
+  };
+
+  const handleRegister = () => {
+    navigate('/register');
   };
 
   return (
@@ -28,7 +31,9 @@ const LoginPage: React.FC = () => {
           <button type="button" onClick={handleLogin}>
             Login
           </button>
-          <button type="button">Registrarse</button>
+          <button type="button" onClick={handleRegister}>
+            Registrarse
+          </button>
         </div>
       </form>
     </div>
