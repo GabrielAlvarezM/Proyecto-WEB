@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title }) => {
   return (
     <div className="layout-container">
       <header className="layout-header">
-        <button onClick={() => navigate('/dashboard')}>‹ Volver al Dashboard</button>
+        <button onClick={() => navigate('/dashboard')} className="back-button-menus">‹ Volver al Menú</button>
         <h1>{title}</h1>
       </header>
       <main className="layout-content">

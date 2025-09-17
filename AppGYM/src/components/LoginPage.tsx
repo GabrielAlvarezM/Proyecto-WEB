@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './LoginPage.css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
 

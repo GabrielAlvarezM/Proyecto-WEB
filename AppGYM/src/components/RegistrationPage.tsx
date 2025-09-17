@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import './RegistrationPage.css';
 import {useNavigate} from 'react-router-dom';
+import type { UserProfile } from '../App';
 
-const RegistrationPage: React.FC = () => {
+interface RegistrationPageProps {
+  onRegister: (data: UserProfile) => void;
+}
+
+const RegistrationPage: React.FC<RegistrationPageProps> = ({ onRegister }) => {
 
   const navigate = useNavigate();
 
@@ -13,12 +18,12 @@ const RegistrationPage: React.FC = () => {
   const [weight, setWeight] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
-  const [workoutFrequency, setWorkoutFrequency] = useState('');
+  const [skillLevel, setSkillLevel] = useState('');
 
   
   const handleRegister = () => {
-    console.log({username, email, password, height, weight, age, gender, workoutFrequency}); 
-    navigate('/login');
+    onRegister({username, email, height, weight, age, gender, skillLevel});
+    navigate('/dashboard');
   };
 
 
@@ -105,13 +110,12 @@ const RegistrationPage: React.FC = () => {
         </div>
         
         <div className="form-group">
-          <label htmlFor="frequency">Días de ejercicio a la semana</label>
-          <select id="frequency" value={workoutFrequency} onChange={(e) => setWorkoutFrequency(e.target.value)}>
-            <option value="">Selecciona la frecuencia</option>
-            <option value="0-1">0 - 1 días</option>
-            <option value="2-3">2 - 3 días</option>
-            <option value="4-5">4 - 5 días</option>
-            <option value="6-7">6 - 7 días</option>
+          <label htmlFor="skillLevel">Nivel de Experiencia</label>
+          <select id="skillLevel" value={skillLevel} onChange={(e) => setSkillLevel(e.target.value)}>
+            <option value="">Selecciona tu nivel</option>
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
           </select>
         </div>
 
