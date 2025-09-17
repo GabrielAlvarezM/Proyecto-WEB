@@ -5,6 +5,7 @@ import RegistrationPage from './components/RegistrationPage';
 import DietPage from './components/DietPage';
 import WorkoutPage from './components/WorkoutPage';
 import SuplementPage from './components/SupplementPage';
+import MainLayout from './components/MainLayout';
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
 
       <Route path="/dashboard" element={<DashboardPage />} />
 
-      <Route path="/diets" element={<DietPage />} />
-      <Route path="/workouts" element={<WorkoutPage />} />
-      <Route path="/supplements" element={<SuplementPage />} />
+      <Route path="/diets" element={<MainLayout title="Plan de Alimentación"><DietPage /></MainLayout>} />
+      <Route path="/workouts" element={<MainLayout title="Planes de Ejercicio"><WorkoutPage /></MainLayout>} />
+      <Route path="/suplements" element={<MainLayout title="Suplementación"><SuplementPage /></MainLayout>} />
+    
       
     </Routes>
 

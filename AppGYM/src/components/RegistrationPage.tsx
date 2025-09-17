@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './RegistrationPage.css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const RegistrationPage: React.FC = () => {
 
@@ -119,7 +119,7 @@ const RegistrationPage: React.FC = () => {
           <h3>Tu IMC: </h3>
         </div>
 
-        <div className="button-group">
+        <div className="button-group-register">
           <button type="button" onClick={handleRegister}>
             Registrarse
           </button>

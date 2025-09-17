@@ -1,10 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import {Link, useNavigate} from 'react-router-dom'; 
 import './DashboardPage.css';
 
+
+
+
 const DashboardPage: React.FC = () => {
+
+
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate('/login');
+  };
+
   return (
+
     <div className="dashboard-container">
+
+      <button onClick={handleGoBack} className="back-button">
+        ‹ Salir
+      </button>
+
       <Link to="/diets" className="dashboard-section diet-section">
         <div className="section-overlay">
           <h2>Planes de Alimentación</h2>
