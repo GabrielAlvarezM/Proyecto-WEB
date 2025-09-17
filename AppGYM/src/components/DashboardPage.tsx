@@ -17,7 +17,7 @@ const DashboardPage: React.FC = () => {
         </div>
       </Link>
 
-      <Link to="/suplements" className="dashboard-section supplements-section">
+      <Link to="/supplements" className="dashboard-section supplements-section">
         <div className="section-overlay">
           <h2>Suplementación</h2>
         </div>

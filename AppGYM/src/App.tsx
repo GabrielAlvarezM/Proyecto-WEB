@@ -4,11 +4,10 @@ import DashboardPage from './components/DashboardPage';
 import RegistrationPage from './components/RegistrationPage';
 import DietPage from './components/DietPage';
 import WorkoutPage from './components/WorkoutPage';
-import SuplementPage from './components/SuplementPage';
+import SuplementPage from './components/SupplementPage';
 
 function App() {
   return (
-
     <Routes>
       {/* placeholder. */}
       {/* placeholder */}
@@ -21,7 +20,7 @@ function App() {
 
       <Route path="/diets" element={<DietPage />} />
       <Route path="/workouts" element={<WorkoutPage />} />
-      <Route path="/suplements" element={<SuplementPage />} />
+      <Route path="/supplements" element={<SuplementPage />} />
       
     </Routes>
 
